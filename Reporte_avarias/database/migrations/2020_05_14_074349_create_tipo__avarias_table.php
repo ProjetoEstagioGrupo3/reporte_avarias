@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateEquipamentosTable extends Migration
+class CreateTipoAvariasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,10 @@ class CreateEquipamentosTable extends Migration
      */
     public function up()
     {
-        Schema::create('equipamentos', function (Blueprint $table) {
+        Schema::create('tipo__avarias', function (Blueprint $table) {
             $table->id();
-            $table->descricao();
+            $table->string('tip_avaria');
+            $table->text('descricao');
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateEquipamentosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('equipamentos');
+        Schema::dropIfExists('tipo__avarias');
     }
 }

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateSwitchsTable extends Migration
+class CreateMarcasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,10 @@ class CreateSwitchsTable extends Migration
      */
     public function up()
     {
-        Schema::create('switchs', function (Blueprint $table) {
+        Schema::create('marcas', function (Blueprint $table) {
             $table->id();
-            $table->foreignId("cod_bastidor");
-            $table->bigInteger('codSwitch');
-            $table->bigInteger('nrTotalPortas');
+            $table->string('Marca');
             $table->timestamps();
-
-            $table->foreign('cod_bastidor')->references('id')->on('bastidores');
         });
     }
 
@@ -31,6 +27,6 @@ class CreateSwitchsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('switchs');
+        Schema::dropIfExists('marcas');
     }
 }

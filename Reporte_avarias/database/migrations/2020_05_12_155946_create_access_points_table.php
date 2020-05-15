@@ -19,6 +19,8 @@ class CreateAccessPointsTable extends Migration
             $table->bigInteger('nrPortaSwitch');
             $table->bigInteger('nrTomadaRede');
             $table->timestamps();
+            $table->foreign('codSwitch')->references('id')->on('switchs');
+            
         });
     }
 
