@@ -3,7 +3,6 @@
 @section('content')
 <!-- Main content -->
 <section class="content">
-<h1>Computadores</h1>
-</section>
-<!-- /.content -->
+    <h1>Marcas</h1>
+  <!-- /.content -->
 @endsection

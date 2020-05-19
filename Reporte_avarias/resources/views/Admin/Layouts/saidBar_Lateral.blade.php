@@ -24,8 +24,8 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
-        <li class="nav-item has-treeview menu-open">
-          <a href="#" class="nav-link active">
+        <li class="nav-item has-treeview">
+          <a href="#" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
               Painel Principal
@@ -34,9 +34,33 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/home" class="nav-link active">
+              <a href="/home" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Pagina Principal</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="/home" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Avarías Reportadas</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="/home" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Lita de Reparações</p>
+              </a>
+            </li>
+          </ul>
+          <ul class="nav nav-treeview">
+            <li class="nav-item">
+              <a href="/home" class="nav-link">
+                <i class="far fa-circle nav-icon"></i>
+                <p>Reportar Avarías</p>
               </a>
             </li>
           </ul>
@@ -45,8 +69,8 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
-        <li class="nav-item has-treeview menu-open">
-          <a href="Equipamentos" class="nav-link active">
+        <li class="nav-item has-treeview">
+          <a href="Equipamentos" class="nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
               Equipamentos
@@ -55,7 +79,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-            <a href="{{route('pc')}}" class="nav-link active">
+            <a href="{{route('pc')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Computadores</p>
               </a>
@@ -63,7 +87,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/home" class="nav-link active">
+              <a href="{{route('projet')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Projetores</p>
               </a>
@@ -71,7 +95,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/home" class="nav-link active">
+              <a href="{{route('switch')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Switchs</p>
               </a>
@@ -79,7 +103,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/home" class="nav-link active">
+              <a href="{{route('bast')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Bastidores</p>
               </a>
@@ -87,13 +111,63 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/home" class="nav-link active">
+              <a href="{{route('accesP')}}" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>AccesPoints</p>
               </a>
             </li>
           </ul>
         </li>
+        <li class="nav-item">
+          <a href="{{route('prof')}}" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Professores
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{route('marc')}}" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Marcas
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{route('loc')}}" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Localizações
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{route('estado')}}" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Estados
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{route('tpAvar')}}" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Tipo Avarías
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="{{asset("AdminLTE/pages/widgets.html")}}" class="nav-link">
+            <i class="nav-icon fas fa-th"></i>
+            <p>
+              Ajuda de dezenvolvedor
+            </p>
+          </a>
+        </li>
+        
+  
       </ul>
     </nav>
     <!-- /.sidebar-menu -->
