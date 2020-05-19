@@ -16,3 +16,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
+Route::get('/Equipamentos', 'EquipamentosController@index')->name('Equipamentos');
+Route::get('/Computadores', 'EquipamentosController@pcs')->name('pc');
