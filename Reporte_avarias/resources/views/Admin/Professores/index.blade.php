@@ -10,7 +10,7 @@
           <!-- general form elements -->
           <div class="card card-primary">
             <div class="card-header">
-              <h3 class="card-title">Adicionar Professores</h3>
+              <h3 class="card-title">Novo Professores</h3>
             </div>
             <!-- /.card-header -->
             <!-- form start -->
@@ -45,5 +45,9 @@
                 <button type="submit" class="btn btn-primary">Submit</button>
               </div>
             </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </section>
 @endsection
