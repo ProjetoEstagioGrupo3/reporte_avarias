@@ -7,18 +7,6 @@
     <span class="brand-text font-weight-light">Reporte Avarias</span>
   </a>
 
-  <!-- Sidebar -->
-  <div class="sidebar">
-    <!-- Sidebar user panel (optional) -->
-    <div class="user-panel mt-3 pb-3 mb-3 d-flex">
-      <div class="image">
-        <img src="{{asset("AdminLTE/dist/img/user2-160x160.jpg")}}" class="img-circle elevation-2" alt="User Image">
-      </div>
-      <div class="info">
-        <a href="#" class="d-block">Alexander Pierce</a>
-      </div>
-    </div>
-
     <!-- Sidebar Menu -->
     <nav class="mt-2">
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
@@ -36,21 +24,13 @@
             <li class="nav-item">
               <a href="/home" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
-                <p>Pagina Principal</p>
-              </a>
-            </li>
-          </ul>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="/home" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
                 <p>Avarías Reportadas</p>
               </a>
             </li>
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/home" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Lita de Reparações</p>
               </a>
@@ -58,7 +38,7 @@
           </ul>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="/home" class="nav-link">
+              <a href="#" class="nav-link">
                 <i class="far fa-circle nav-icon"></i>
                 <p>Reportar Avarías</p>
               </a>
@@ -173,4 +153,4 @@
     <!-- /.sidebar-menu -->
   </div>
   <!-- /.sidebar -->
-</aside>s
+</aside>

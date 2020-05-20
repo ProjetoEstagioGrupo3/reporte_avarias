@@ -23,6 +23,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('Admin/admin');
+        $user=Auth()->User();
+        return view('Admin/admin')->with(compact('user'));
     }
 }

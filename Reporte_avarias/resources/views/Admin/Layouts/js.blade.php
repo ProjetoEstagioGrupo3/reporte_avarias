@@ -32,3 +32,35 @@
 <script src="{{asset("AdminLTE/dist/js/pages/dashboard.js")}}"></script>
 <!-- AdminLTE for demo purposes -->
 <script src="{{asset("AdminLTE/dist/js/demo.js")}}"></script>
+<!-- DataTables -->
+<script src="{{asset("AdminLTE/plugins/datatables/jquery.dataTables.min.js")}}"></script>
+<script src="{{asset("AdminLTE/plugins/datatables-bs4/js/dataTables.bootstrap4.min.js")}}"></script>
+<script src="{{asset("AdminLTE/plugins/datatables-responsive/js/dataTables.responsive.min.js")}}"></script>
+<script src="{{asset("AdminLTE/plugins/datatables-responsive/js/responsive.bootstrap4.min.js")}}"></script>
+<!-- AdminLTE App -->
+<script src="{{asset("AdminLTE/dist/js/adminlte.min.js")}}"></script>
+<!-- page script -->
+<script>
+  $(function () {
+    $("#example1").DataTable({
+      "responsive": true,
+      "autoWidth": false,
+    });
+    $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+  });
+</script>
+<!-- bs-custom-file-input -->
+<script src="{{asset("AdminLTE/plugins/bs-custom-file-input/bs-custom-file-input.min.js")}}"></script>
+<script type="text/javascript">
+$(document).ready(function () {
+  bsCustomFileInput.init();
+});
+</script>
