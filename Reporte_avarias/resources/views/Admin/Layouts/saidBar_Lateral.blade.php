@@ -115,7 +115,7 @@
           </a>
         </li>
         <li class="nav-item">
-          <a href="{{route('loc')}}" class="nav-link">
+          <a href="/Localizacoes" class="nav-link">
             <i class="nav-icon fas fa-users"></i>
             <p>
               Localizações

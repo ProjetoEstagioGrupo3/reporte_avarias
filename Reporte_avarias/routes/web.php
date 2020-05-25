@@ -32,7 +32,7 @@ Route::get('/Professores', 'ProfessoresController@index')->name('prof');
 //Marcas
 Route::get('/Marcas', 'MarcasController@index')->name('marc');
 //Localizacoes
-Route::get('/Localizacoes', 'LocalizacoesController@index')->name('loc');
+Route::resource('Localizacoes','LocalizacoesController');
 //Estados
 Route::get('/Estados', 'EstadosController@index')->name('estado');
 //Tipo Avarias

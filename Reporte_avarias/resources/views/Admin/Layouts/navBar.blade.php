@@ -145,8 +145,11 @@
           </li>
           <!-- Menu Footer-->
           <li class="user-footer">
-            <a href="#" class="btn btn-default btn-flat">Profile</a>
-            <a href="#" class="btn btn-default btn-flat float-right">Sign out</a>
+            <a href="#" class="btn btn-primary btn-flat">Prefil</a>
+            <a href="#" class="btn btn-danger btn-flat" onclick="event.preventDefault();document.getElementById('logout-form').submit();">Sair</a>
+          <form id="logout-form"action="{{route('logout')}}" method="POST" style="display:nome;">
+             @csrf
+          </form>
           </li>
         </ul>
       </li>
