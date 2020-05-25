@@ -14,7 +14,8 @@ class LocalizacoesController extends Controller
     public function index()
     {
         $locS=Localizacoes::paginate(5);
-        return view('Admin/Localizacoes/index')->with(compact('locS'));
+        $cr_ed=0;
+        return view('Admin/Localizacoes/index')->with(compact('locS','cr_ed'));
     }
 
     /**
@@ -64,7 +65,10 @@ class LocalizacoesController extends Controller
      */
     public function edit($id)
     {
-        //
+        $locS=Localizacoes::paginate(5);
+        $loc_edit =Localizacoes::findOrFail($id);
+        $cr_ed=1;
+        return view('Admin/Localizacoes/index')->with(compact('locS','loc_edit','cr_ed'));
     }
 
     /**
@@ -76,7 +80,15 @@ class LocalizacoesController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $request->validate([
+            'localizacao' => 'required',
+        ]);
+        
+         $data = $request->all();
+            Localizacoes::Where(['id'=>$id])->update([
+                'localizacao' =>$data['localizacao'],
+            ]);
+        return redirect('/Localizacoes')->with('fm-success', 'Post alterado com sucesso');
     }
 
     /**
@@ -87,6 +99,7 @@ class LocalizacoesController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Localizacoes::Where(['id'=>$id])->delete();
+        return redirect('/Localizacoes')->with('fm-success', 'Post eliminado com sucesso');
     }
 }
