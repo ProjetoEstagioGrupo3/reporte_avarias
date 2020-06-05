@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class AccessPoints extends Model
 {
     protected $fillable = [
-        'codSwitch','nrPortaSwitch','nrTomadaRede','created_at','update_at'
+        'codSwitch_id','equipamentos_id','nrPortaSwitch','nrTomadaRede','created_at','update_at'
     ];
     
     public function Equipamentos()
     {
-        return $this->belongsTo(Equipamentos::class);
+        return $this->hasOne(Equipamentos::class);
     }
 }

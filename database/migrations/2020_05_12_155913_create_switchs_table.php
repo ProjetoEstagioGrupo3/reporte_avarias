@@ -15,12 +15,13 @@ class CreateSwitchsTable extends Migration
     {
         Schema::create('switchs', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('cod_bastidor')->unsigned();
+            $table->bigInteger('codbastidor_id')->unsigned();
+            $table->bigInteger('equipamento_id')->unsigned()->unique();
             $table->Integer('codSwitch');
             $table->Integer('nrTotalPortas');
             $table->timestamps();
 
-            $table->foreign('cod_bastidor')->references('id')->on('bastidores');
+            $table->foreign('codbastidor_id')->references('id')->on('bastidores');
         });
     }
 

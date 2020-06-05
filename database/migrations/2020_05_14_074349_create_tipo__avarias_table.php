@@ -15,7 +15,7 @@ class CreateTipoAvariasTable extends Migration
     {
         Schema::create('tipo__avarias', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('tip_avaria');
+            $table->string('tipo_avaria');
             $table->string('descricao');
             $table->timestamps();
         });

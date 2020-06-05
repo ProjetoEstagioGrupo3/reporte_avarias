@@ -15,12 +15,13 @@ class CreateAccessPointsTable extends Migration
     {
         Schema::create('access_points', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('codSwitch')->unsigned();
+            $table->bigInteger('codSwitch_id')->unsigned();
+            $table->bigInteger('equipamento_id')->unsigned()->unique();
             $table->Integer('nrPortaSwitch');
             $table->Integer('nrTomadaRede');
             $table->timestamps();
              
-            $table->foreign('codSwitch')->references('id')->on('switchs');
+            $table->foreign('codSwitch_id')->references('id')->on('switchs');
             
         });
     }

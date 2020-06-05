@@ -7,11 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 class Switchs extends Model
 {
     protected $fillable = [
-        'codBastidor','created_at','update_at'
+        'codbastidor_id','codSwitch','nrTotalPortas','equipamentos_id','created_at','update_at'
     ];
     
     public function Equipamentos()
     {
-        return $this->belongsTo(Equipamentos::class);
+        return $this->hasOne(Equipamentos::class);
     }
 }

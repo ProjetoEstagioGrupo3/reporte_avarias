@@ -15,7 +15,8 @@ class CreateBastidoresTable extends Migration
     {
         Schema::create('bastidores', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('codBastidor');
+            $table->bigInteger('equipamento_id')->unsigned()->unique();
+            $table->Integer('codBastidor');
             $table->timestamps();
         });
     }

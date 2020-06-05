@@ -16,6 +16,7 @@ class CreateProjetoresTable extends Migration
         Schema::create('projetores', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('tipoProjetor');
+            $table->bigInteger('equipamento_id')->unsigned()->unique();
             $table->string('modeloProjetor');
             $table->timestamps();
         });

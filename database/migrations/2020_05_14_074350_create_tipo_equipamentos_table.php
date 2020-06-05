@@ -15,7 +15,7 @@ class CreateTipoEquipamentosTable extends Migration
     {
         Schema::create('tipo_equipamentos', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('tipoEquipamento')->unique();
+            $table->string('tipoEquipamento');
             $table->timestamps();
         });
     }

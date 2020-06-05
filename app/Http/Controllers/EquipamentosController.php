@@ -36,7 +36,7 @@ class EquipamentosController extends Controller
         $marcas=Marcas::all();
         $tipos=TipoEquipamento::all();
         $equipamentos=Equipamentos::all();
-        return view('Admin.Equipamentos.index')->with(compact('equipamentos','localizacoes', 'marcas', 'tipos'));
+        return view('Admin.Equipamentos.index');
     }
 
     /**
@@ -125,7 +125,7 @@ class EquipamentosController extends Controller
      */
     public function destroy($id)
     {
-        Equipamentos::Where(['id'=>$id])->delete();
-        return redirect('/Equipamentos')->with('fm-success', 'Post eliminado com sucesso');
+        Equipamentos::findOrFail($id)->delete();
+        return redirect (route('/Equipamentos'))->with('fm-success','post eliminada com sucesso');
     }
 }

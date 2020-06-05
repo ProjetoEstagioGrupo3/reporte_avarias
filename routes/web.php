@@ -21,7 +21,6 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 //Equipamentos
-Route::get('/Equipamentos', 'EquipamentosController@index')->name('Equipamentos');
 Route::get('/Computadores', 'EquipamentosController@pcs')->name('pc');
 Route::get('/Projetores', 'EquipamentosController@projets')->name('projet');
 Route::get('/Switchs', 'EquipamentosController@switchs')->name('switch');

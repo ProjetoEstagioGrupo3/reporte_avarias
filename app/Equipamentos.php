@@ -7,28 +7,28 @@ use Illuminate\Database\Eloquent\Model;
 class Equipamentos extends Model
 {
     protected $fillable = [
-        'Descricao','id_localizacao','id_marca','tipoequipamento','created_at','update_at'
+        'descricao','localizacao_id','marca_id','tipoequipamento_id','computadores_id','tipo_id','accesspoints_id','bastidores_id','switchs_id','projetores_id','created_at','update_at'
     ];
     
     public function Computadores()
     {
-        return $this->belongsTo(Computadores::class);
+        return $this->hasOne(Computadores::class);
     }
     public function Projetores()
     {
-        return $this->belongsTo(Projetores::class);
+        return $this->hasOne(Projetores::class);
     }
     public function Switchs()
     {
-        return $this->belongsTo(Switchs::class);
+        return $this->hasOne(Switchs::class);
     }
     public function Bastidores()
     {
-        return $this->belongsTo(Bastidores::class);
+        return $this->hasOne(Bastidores::class);
     }
     public function AccessPoits()
     {
-        return $this->belongsTo(AccessPoits::class);
+        return $this->hasOne(AccessPoits::class);
     }
     public function TipoEquipamento()
     {

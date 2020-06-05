@@ -15,15 +15,15 @@ class CreateReparacoesTable extends Migration
     {
         Schema::create('reparacoes', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->bigInteger('id_avarias')->unsigned();
-            $table->bigInteger('id_users')->unsigned();
-            $table->bigInteger('id_estado')->unsigned();
+            $table->bigInteger('avarias_id')->unsigned();
+            $table->bigInteger('users_id')->unsigned();
+            $table->bigInteger('estado_id')->unsigned();
             $table->string('descricao');
             $table->timestamps();
 
-            $table->foreign('id_users')->references('id')->on('users');
-            $table->foreign('id_estado')->references('id')->on('estados');
-            $table->foreign('id_avarias')->references('id')->on('registo__avarias');
+            $table->foreign('users_id')->references('id')->on('users')->onDelete('cascade');
+            $table->foreign('estado_id')->references('id')->on('estados')->onDelete('cascade');
+            $table->foreign('avarias_id')->references('id')->on('registo__avarias')->onDelete('cascade');
         });
     }
 
