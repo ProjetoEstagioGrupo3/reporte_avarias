@@ -12,6 +12,6 @@ class Localizacoes extends Model
     
     public function Equipamentos()
     {
-        return $this->hasMany(Equipamentos::class);
+        return $this->hasMany(Equipamentos::class,'localizacao_id','localizacao');
     }
 }

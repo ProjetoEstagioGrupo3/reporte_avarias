@@ -12,6 +12,6 @@ class Computadores extends Model
     
     public function Equipamentos()
     {
-        return $this->hasOne(Equipamentos::class);
+        return $this->hasOne(Equipamentos::class,'computadores_id','id');
     }
 }

@@ -12,7 +12,7 @@ class Equipamentos extends Model
     
     public function Computadores()
     {
-        return $this->hasOne(Computadores::class);
+        return $this->hasOne(Computadores::class,'computadores_id');
     }
     public function Projetores()
     {
@@ -32,14 +32,14 @@ class Equipamentos extends Model
     }
     public function TipoEquipamento()
     {
-        return $this->belongsTo(TipoEquipamento::class);
+        return $this->belongsTo(TipoEquipamento::class,'tipo_id');
     }
     public function Marcas()
     {
-        return $this->belongsTo(Marcas::class);
+        return $this->belongsTo(Marcas::class,'marca_id');
     }
     public function Localizacoes()
     {
-        return $this->belongsTo(Localizacoes::class);
+        return $this->belongsTo(Localizacoes::class,'localizacao_id');
     }
 }

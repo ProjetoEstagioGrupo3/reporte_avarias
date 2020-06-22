@@ -15,7 +15,7 @@ class CreateComputadoresTable extends Migration
     {
         Schema::create('computadores', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->Integer('macaddress');
+            $table->string('macaddress');
             $table->bigInteger('equipamento_id')->unsigned()->unique();
             $table->string('sistemaOperativo');
             $table->Integer('ram');
