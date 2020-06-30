@@ -12,6 +12,10 @@ class Switchs extends Model
     
     public function Equipamentos()
     {
-        return $this->hasOne(Equipamentos::class);
+        return $this->hasOne(Equipamentos::class,'switchs_id','codSwitch');
+    }
+    public function Bastidores()
+    {
+        return $this->belongsTo(Bastidores::class,'codBastidores_id','codSwitch');
     }
 }

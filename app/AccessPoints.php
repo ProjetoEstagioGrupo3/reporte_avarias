@@ -12,6 +12,6 @@ class AccessPoints extends Model
     
     public function Equipamentos()
     {
-        return $this->hasOne(Equipamentos::class);
+        return $this->hasOne(Equipamentos::class,'accesspoints_id','nrPortaSwitch');
     }
 }

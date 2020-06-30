@@ -29,6 +29,10 @@ Route::get('/Bastidores', 'EquipamentosController@basts')->name('bast');
 Route::get('/AccesPointss', 'EquipamentosController@accesPs')->name('accesP');
 
 
+//estatisticas
+Route::get('/Estatisticas', 'EstatisticasController@index')->name('Estatisticas');
+
+
 Route::group(['middleware' => ['auth']], function () {
     Route::get('/admin', 'AdminController@index');
     Route::resource('Marcas', 'MarcasController');

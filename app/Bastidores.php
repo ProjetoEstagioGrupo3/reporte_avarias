@@ -12,6 +12,10 @@ class Bastidores extends Model
     
     public function Equipamentos()
     {
-        return $this->hasOne(Equipamentos::class);
+        return $this->hasOne(Equipamentos::class,'bastidores_id','codBastidor');
+    }
+    public function Switchs()
+    {
+        return $this->hasMay(Equipamentos::class,'codbastidores_id');
     }
 }

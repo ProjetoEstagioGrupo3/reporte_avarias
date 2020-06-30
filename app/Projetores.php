@@ -12,6 +12,6 @@ class Projetores extends Model
     
     public function Equipamentos()
     {
-        return $this->hasOne(Equipamentos::class);
+        return $this->hasOne(Equipamentos::class,'projetores_id','tipoProjetor');
     }
 }

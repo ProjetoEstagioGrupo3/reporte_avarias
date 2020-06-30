@@ -145,6 +145,14 @@
           </a>
         </li>
         <li class="nav-item">
+          <a href="/Estatisticas" class="nav-link">
+            <i class="nav-icon fas fa-users"></i>
+            <p>
+              Estatísticas
+            </p>
+          </a>
+        </li>
+        <li class="nav-item">
           <a href="{{asset("AdminLTE/pages/widgets.html")}}" class="nav-link">
             <i class="nav-icon fas fa-th"></i>
             <p>

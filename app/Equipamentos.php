@@ -16,19 +16,19 @@ class Equipamentos extends Model
     }
     public function Projetores()
     {
-        return $this->hasOne(Projetores::class);
+        return $this->hasOne(Projetores::class,'projetores_id');
     }
     public function Switchs()
     {
-        return $this->hasOne(Switchs::class);
+        return $this->hasOne(Switchs::class,'switchs_id');
     }
     public function Bastidores()
     {
-        return $this->hasOne(Bastidores::class);
+        return $this->hasOne(Bastidores::class,'bastidores_id');
     }
     public function AccessPoits()
     {
-        return $this->hasOne(AccessPoits::class);
+        return $this->hasOne(AccessPoits::class,'accesspoints_id');
     }
     public function TipoEquipamento()
     {
