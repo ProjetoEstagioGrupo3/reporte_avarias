@@ -16,6 +16,6 @@ class Switchs extends Model
     }
     public function Bastidores()
     {
-        return $this->belongsTo(Bastidores::class,'codBastidores_id','codSwitch');
+        return $this->belongsTo(Bastidores::class,'codbastidor_id');
     }
 }

@@ -205,7 +205,7 @@ input{
               @endif
               @endforeach
             </div>
-            <div class="col-2">
+            <div class="col">
               Tipo de equipamento 
               @foreach ($equipamentos as $equipa)
               @if ($equipa->tipoEquipamento->id=='4')
@@ -224,16 +224,16 @@ input{
               @endforeach
             </div>
               <div class="col">
-                Tipo de Projetor
+                Numero total de portas
                 @foreach ($switchs as $switch)
                   {{$switch->nrTotalPortas}}
                   <br>
                 @endforeach
               </div>
               <div class="col">
-                Modelo Projetor <br>
+                Codigo do Switch <br>
                 @foreach ($switchs as $switch)
-                  {{$switch->codSwitchs}}
+                  {{$switch->codSwitch}}
                   <br>
                 @endforeach
               </div>

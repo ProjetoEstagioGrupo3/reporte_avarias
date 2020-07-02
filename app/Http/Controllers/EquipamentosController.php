@@ -160,7 +160,7 @@ class EquipamentosController extends Controller
     
             $equipamentos_id=$equipamentos->id;
 
-            $switch->codBastidor_id = $data['codBastidor_id'];
+            $switch->codbastidor_id = $data['codBastidor_id'];
             $switch->codSwitch = $data['codSwitch'];
             $switch->nrTotalPortas = $data['nrTotalPortas'];
             $switch->equipamento_id=$equipamentos_id;

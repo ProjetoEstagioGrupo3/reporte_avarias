@@ -16,6 +16,6 @@ class Bastidores extends Model
     }
     public function Switchs()
     {
-        return $this->hasMay(Equipamentos::class,'codbastidores_id');
+        return $this->hasMay(Switchs::class,'codbastidor_id');
     }
 }
