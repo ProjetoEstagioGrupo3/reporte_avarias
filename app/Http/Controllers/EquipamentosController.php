@@ -223,9 +223,16 @@ class EquipamentosController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function show($id)
+    
     {
+        
+        $pcs=Computadores::all();
+        $projs=Projetores::all();
+        $basts=Bastidores::all();
+        $switchs=Switchs::all();
+        $accesps=AccessPoints::all();
         $equipamento= Equipamentos::findOrFail($id);
-        return view('Admin.Equipamentos.show')->with(compact('equipamento'));
+        return view('Admin.Equipamentos.show')->with(compact('equipamento','pcs','projs','basts','switchs','accesps'));
     }
 
     /**
@@ -280,6 +287,11 @@ class EquipamentosController extends Controller
     public function destroy($id)
     {
         Equipamentos::Where(['id'=>$id])->delete();
+        Computadores::Where(['equipamento_id'=>$id])->delete();
+        Projetores::Where(['equipamento_id'=>$id])->delete();
+        Bastidores::Where(['equipamento_id'=>$id])->delete();
+        Switchs::Where(['equipamento_id'=>$id])->delete();
+        AccessPoints::Where(['equipamento_id'=>$id])->delete();
         return redirect('/Equipamentos')->with('fm-success', 'Post eliminado com sucesso');
     }
 }

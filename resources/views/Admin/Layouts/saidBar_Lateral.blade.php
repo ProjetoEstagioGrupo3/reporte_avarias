@@ -47,58 +47,10 @@
       <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
         <!-- Add icons to the links using the .nav-icon class
              with font-awesome or any other icon font library -->
-        <li class="nav-item has-treeview">
-          <a href="Equipamentos" class="nav-link">
-            <i class="nav-icon fas fa-tachometer-alt"></i>
-            <p>
-              Equipamentos
-              <i class="right fas fa-angle-left"></i>
-            </p>
-          </a>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-            <a href="{{route('pc')}}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Computadores</p>
-              </a>
-            </li>
-          </ul>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="{{route('projet')}}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Projetores</p>
-              </a>
-            </li>
-          </ul>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="{{route('switch')}}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Switchs</p>
-              </a>
-            </li>
-          </ul>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="{{route('bast')}}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>Bastidores</p>
-              </a>
-            </li>
-          </ul>
-          <ul class="nav nav-treeview">
-            <li class="nav-item">
-              <a href="{{route('accesP')}}" class="nav-link">
-                <i class="far fa-circle nav-icon"></i>
-                <p>AccessPoints</p>
-              </a>
-            </li>
-          </ul>
-        </li>
+        
         <li class="nav-item">
           <a href="/Equipamentos" class="nav-link">
-            <i class="nav-icon fas fa-users"></i>
+            <i class="nav-icon fas fa-desktop"></i>
             <p>
               Equipamentos
             </p>
@@ -130,7 +82,7 @@
         </li>
         <li class="nav-item">
           <a href="/Localizacoes" class="nav-link">
-            <i class="nav-icon fas fa-users"></i>
+            <i class="nav-icon far fa-map"></i>
             <p>
               Localizações
             </p>
@@ -146,7 +98,7 @@
         </li>
         <li class="nav-item">
           <a href="/Estatisticas" class="nav-link">
-            <i class="nav-icon fas fa-users"></i>
+            <i class="nav-icon fas fa-search"></i>
             <p>
               Estatísticas
             </p>

@@ -14,4 +14,8 @@ class AccessPoints extends Model
     {
         return $this->hasOne(Equipamentos::class,'accesspoints_id','nrPortaSwitch');
     }
+    public function Switchs()
+    {
+        return $this->belongsTo(Switchs::class,'codSwitch_id');
+    }
 }

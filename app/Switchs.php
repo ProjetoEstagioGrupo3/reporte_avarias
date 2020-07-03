@@ -18,4 +18,9 @@ class Switchs extends Model
     {
         return $this->belongsTo(Bastidores::class,'codbastidor_id');
     }
+
+    public function AccessPoints()
+    {
+        return $this->hasMany(AccessPoints::class,'codSwitch_id','codSwitch');
+    }
 }

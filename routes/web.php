@@ -31,6 +31,7 @@ Route::get('/AccesPointss', 'EquipamentosController@accesPs')->name('accesP');
 
 //estatisticas
 Route::get('/Estatisticas', 'EstatisticasController@index')->name('Estatisticas');
+Route::get('/Estatisticas2', 'EstatisticasController@index2')->name('Estatisticas2');
 
 
 Route::group(['middleware' => ['auth']], function () {
